@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Drag and Drop CAPTCHA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="captcha-container">
+        <!-- Heading for the CAPTCHA -->
+        <h1>Verifying You Are a Human</h1>
+        <p>This may take a few seconds...</p> <!-- Additional instruction message -->
+
+        <!-- Main Game Container -->
+        <div id="game-container">
+            <div id="items">
+                <!-- Changed item names -->
+                <div class="item" draggable="true" data-match="1">Apple</div>
+                <div class="item" draggable="true" data-match="2">Banana</div>
+                <div class="item" draggable="true" data-match="3">Orange</div>
+                <div class="item" draggable="true" data-match="4">Grape</div>
+            </div>
+            <div id="targets">
+                <!-- Changed target names -->
+                <div class="target" data-match="1">Basket 1</div>
+                <div class="target" data-match="2">Basket 2</div>
+                <div class="target" data-match="3">Basket 3</div>
+                <div class="target" data-match="4">Basket 4</div>
+            </div>
+            <button id="submit-button">Verify</button>
+        </div>
+
+        <!-- Message for feedback -->
+        <div id="feedback-message" style="display: none;">
+            <p>Checking your answers... Please wait...</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
